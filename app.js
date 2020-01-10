@@ -53,28 +53,33 @@ try {
 // Start server
 sails.lift(rc('sails'));
 
-var five = require('johnny-five');
+const { Board, Thermometer } = require('johnny-five');
+// const Oled = require('oled-js');
 
-// Make variables for objects we'll be using
-var board, led, pushButton;
+const board = new Board();
 
-// Make a new Board Instance
-board = new five.Board();
+board.on('ready', () => {
+  console.log('Connected to Arduino, ready.');
 
-// When the board's connected, turn on the LED connected to pin 9
-board.on('ready', function() {
-  console.log('[johnny-five] Board is ready.');
-
-  // Make a new Led object and connect it to pin 9
-  led = new five.Led(9);
-
-  // Switch it on!
-  led.on();
-
-  // When the board is closing, stop any LED animations and turn it off
-  this.on('exit', function() {
-    led.stop().off();
-    console.log('[johnny-five] Bye Bye.');
+  const thermometer = new Thermometer({
+    controller: "TMP36",
+    pin: "A0"
   });
 
+  // const opts = {
+  //   width: 128,
+  //   height: 64,
+  //   address: 0x3D
+  // };
+
+  // const oled = new Oled(board, opts);
+
+  thermometer.on("change", () => {
+    const {celsius, fahrenheit, kelvin} = thermometer;
+    console.log("Thermometer");
+    console.log("  celsius      : ", celsius);
+    console.log("  fahrenheit   : ", fahrenheit);
+    console.log("  kelvin       : ", kelvin);
+    console.log("--------------------------------------");
+  });
 });
