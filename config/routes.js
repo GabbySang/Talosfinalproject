@@ -22,6 +22,7 @@ module.exports.routes = {
   '/': { 
     view: 'pages/homepage' 
   },
+
   'GET /login': { action: 'view-login' },
   
   'GET /signup': { action: 'view-signup' },
@@ -29,10 +30,11 @@ module.exports.routes = {
   'GET /aboutus': { action: 'view-aboutus' },
 
   'GET /account': { action: 'view-account' },
+  'GET /chatroom': { action: 'view-chatroom' },
 
-  'PUT   /api/v1/entrance/login':                        { action: 'entrance/login' },
-  'POST  /api/v1/entrance/signup':                       { action: 'entrance/signup' },
-
+  // 'PUT   /api/v1/login':                        { action: 'pages/chatroom' },
+  // 'POST  /login':                       { action: 'pages/chatroom' },
+  // 'POST  /api/v1/signup':                       { action: 'entrance/chatroom' },
 }
     // action: 'view-login' },
 

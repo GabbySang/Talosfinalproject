@@ -5,11 +5,22 @@
   <label for="check" class="checkbtn">
     <i class="fa fa-bars"></i>
   </label>
-  <ul>
-    <li><a class="active">Home</a></li>
-    <li><a>Chats</a></li>
-    <!-- <li><a>Products</a></li> -->
-    <li><a>About us</a></li>
-    <li><a>Account</a></li>
-  </ul>
-</nav>
+    <ul>
+      <li>
+          <a href=homepage>Home</a>
+      </li>
+      <li>
+          <a href=chatroom>Chats</a>
+      </li>
+      <li>
+          <a href=account>Account</a>
+      </li>
+    </ul>
+  </nav>
+
+<form class="form" action="account" method="get">
+  <input type="text" name="user" placeholder="Username">
+  <input type="password" name="pass" placeholder="Password">
+  <input type="submit" name="login" value="Enter">
+</form>
+

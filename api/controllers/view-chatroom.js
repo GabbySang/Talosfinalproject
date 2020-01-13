@@ -1,16 +1,16 @@
 module.exports = {
 
 
-  friendlyName: 'View login',
+  friendlyName: 'View chatroom',
 
 
-  description: 'Display "Login" page.',
+  description: 'Display "Chatroom" page.',
 
 
   exits: {
 
     success: {
-      viewTemplatePath: 'pages/login'
+      viewTemplatePath: 'pages/chatroom'
     }
 
   },
@@ -25,4 +25,3 @@ module.exports = {
 
 
 };
-

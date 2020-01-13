@@ -1,4 +1,5 @@
 module.exports = {
+  
 
 
   friendlyName: 'View signup',
@@ -22,6 +23,14 @@ module.exports = {
     return {};
 
   }
-
+ 
 
 };
+
+// module.exports = {
+//   account: function(req, res){
+//       res.view('account');
+//   }
+//   }
+ 
+  

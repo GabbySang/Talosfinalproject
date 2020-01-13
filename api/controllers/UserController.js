@@ -10,7 +10,7 @@ module.exports = {
         email: req.param('email'),
         password: req.param('password'),
         successRedirect: '/',
-        invalidRedirect: '/login'
+        invalidRedirect: '/'
       });
     },
   
