@@ -24,3 +24,20 @@ This app was originally generated on Fri Jan 10 2020 16:02:35 GMT+0000 (Greenwic
 Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
 -->
 
+## Temparature Measurment Feature
+
+### Hardware Requirements
+
+– 1 x Arduino Uno R3;
+– 1 x TMP36, DHT11 or DHT22;
+– Breadboard 
+- Male/male jumper wires.
+
+### Additional Libraries Required
+
+- adafruit_SSD1306.h
+- adafruit_GFX.h
+
+> Libraries are installed from the following tabs on the Arduino IDE 
+> Sketch --> Include Library --> Manage Library
+> Search for libraries and Install. 
