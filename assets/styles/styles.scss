@@ -1,0 +1,252 @@
+/*On-Off toggle*/
+@import url(https://fonts.googleapis.com/css?family=Monoton&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Monoton&display=swap);
+
+@font-face {
+  font-family: 'Monoton';
+  font-style: cursive;
+  font-weight: 400;
+  
+  src: local('Monoton'), local('Monoton-cursive'), 
+ url(https://fonts.googleapis.com/css?family=Monoton&display=swap);
+}
+
+.toggle {
+	display: inline;
+	text-align: center;
+  user-select: none;
+}
+
+	.toggle--checkbox {
+    display: none;
+	}
+	.toggle--btn {
+		display: inline;
+		margin: 0 auto;
+		display: inline;
+		font-size: 1.2em;
+    word-spacing: 1000px;
+		transition: all 350ms ease-in;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	.toggle--btn,
+	.toggle--checkbox,
+	.toggle--feature {
+		&,
+		&:before,
+		&:after {
+			transition: all 250ms ease-in;
+		}
+		&:before,
+		&:after {
+			content: '';
+			display: inline;
+		}
+	}
+
+@keyframes neon {
+	  0% {
+	    text-shadow: 0 0 10px #fff,
+	               0 0 15px  #fff,
+	               0 0 25px  #fff,
+	               0 0 40px  #FF9900,
+	               0 0 70px  #FF9900,
+	               0 0 90px  #FF9900,
+	               0 0 90px  #FF9900;
+	  }
+	  100% {
+	    text-shadow: 0 0 5px #fff,
+	               0 0 10px #fff,
+	               0 0 15px #fff,
+	               0 0 20px #FF9900,
+	               0 0 35px #FF9900,
+	               0 0 40px #FF9900,
+	               0 0 50px #FF9900;
+	  }
+	}
+	// $textColor--active: #f1f1f1;
+	// $textColor--inactive: #333;
+ .toggle--btn {
+			font-family: 'Monoton', cursive;
+			text-transform: uppercase;
+			font-size: 5.2em;
+      height: 2px;
+      vertical-align: bottom;
+      width: 100%;
+      margin: auto;
+      position: absolute;
+      top: 700px;
+      left: 400px;
+      right: center;
+      bottom: 0px;
+   
+			// color: $textColor--inactive;
+text-shadow: 0 0 10px transparent,
+	               0 0 15px  transparent,
+	               0 0 25px  transparent,
+	               0 0 40px  transparent,
+	               0 0 70px  transparent,
+	               0 0 90px  transparent,
+	               0 0 90px  transparent;
+
+			&:before,
+			&:after {
+				display: inline;
+				margin: 0 10px;
+				transition: all 220ms ease-in-out;
+			}
+&:before {
+				content: attr(data-label-on);
+				animation: neon 1.5s ease-in-out infinite alternate;
+				animation-delay: 90ms;
+				color: $textColor--active;
+			}
+			&:after {
+				content: attr(data-label-off);
+			}
+		}
+.toggle--checkbox {
+			&:checked {
+				& + .toggle--btn {
+					&:before {
+						animation: none;
+						color: $textColor--inactive;
+					}
+					&:after {
+						animation: neon 1.5s ease-in-out infinite alternate;
+						animation-delay: 90ms;
+						color: $textColor--active;
+					}
+				}
+			}
+		}
+
+//pulse-stop toggles
+
+@import url(https://fonts.googleapis.com/css?family=Monoton&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Monoton&display=swap);
+
+@font-face {
+  font-family: 'Monoton';
+  font-style: cursive;
+  font-weight: 400;
+  
+ src: local('Monoton'), local('Monoton-cursive'), 
+ url(https://fonts.googleapis.com/css?family=Monoton&display=swap);
+}
+
+.toggle {
+	display: inline;
+	text-align: right;
+  user-select: none;
+}
+
+	.toggle--checkbox {
+    display: none;
+	}
+	.toggle--btn {
+		display: inline;
+		margin: 0 auto;
+		display: inline;
+		font-size: 1.2em;
+    //word-spacing: 1000px;
+		transition: all 350ms ease-in;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	.toggle--btn,
+	.toggle--checkbox,
+	.toggle--feature {
+		&,
+		&:before,
+		&:after {
+			transition: all 250ms ease-in;
+		}
+		&:before,
+		&:after {
+			content: '';
+			display: inline;
+		}
+	}
+
+@keyframes glow {
+	  0% {
+	    text-shadow: 0 0 10px #fff,
+	               0 0 15px  #fff,
+	               0 0 25px  #fff,
+	               0 0 40px  #FF9900,
+	               0 0 70px  #FF9900,
+	               0 0 90px  #FF9900,
+	               0 0 90px  #FF9900;
+	  }
+	  100% {
+	    text-shadow: 0 0 5px #fff,
+	               0 0 10px #fff,
+	               0 0 15px #fff,
+	               0 0 20px #FF9900,
+	               0 0 35px #FF9900,
+	               0 0 40px #FF9900,
+	               0 0 50px #FF9900;
+	  }
+	}
+	$textColor--active: #f1f1f1;
+	$textColor--inactive: #333;
+ .toggle--btn {
+			font-family: 'Monoton', cursive;
+			text-transform: uppercase;
+			font-size: 5.2em;
+      height: 2px;
+      vertical-align: bottom;
+      width: 100%;
+      margin: auto;
+      position: absolute;
+      top: 1000px;
+      right: 400px;
+      left: 950px;
+      bottom: 300px;
+   
+			color: $textColor--inactive;
+text-shadow: 0 0 10px transparent,
+	               0 0 15px  transparent,
+	               0 0 25px  transparent,
+	               0 0 40px  transparent,
+	               0 0 70px  transparent,
+	               0 0 90px  transparent,
+	               0 0 90px  transparent;
+
+			&:before,
+			&:after {
+				display: inline;
+				margin: 0 10px;
+				transition: all 220ms ease-in-out;
+			}
+&:before {
+				content: attr(data-label-pulse);
+				animation: glow 1.5s ease-in-out infinite alternate;
+				animation-delay: 90ms;
+				color: $textColor--active;
+			}
+			&:after {
+				content: attr(data-label-stop);
+			}
+		}
+.toggle--checkbox {
+			&:checked {
+				& + .toggle--btn {
+					&:before {
+						animation: none;
+						color: $textColor--inactive;
+					}
+					&:after {
+						animation: glow 1.5s ease-in-out infinite alternate;
+						animation-delay: 90ms;
+						color: $textColor--active;
+					}
+				}
+            }
+        } */ */
