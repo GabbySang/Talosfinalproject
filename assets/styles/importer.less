@@ -9,6 +9,16 @@
  *   https://sailsjs.com/anatomy/assets/styles/importer-less
  */
 
+ // Styleguide  (LESS mixins/variables only, no global selectors)
+// @import 'styleguide/index.less';
+
+// Overall layout  (contains global selectors)
+// @import 'bootstrap-overrides.less';
+// @import 'layout.less';
+
+// Per-component styles
+// @import 'components/datepicker.component.less';
+// @import 'components/ajax-button.component.less';
 
 // For example:
 //
@@ -22,3 +32,9 @@
 // @import 'pages/signup.less';
 //
 // etc.
+
+@import '../vendor/semantic/dist/semantic.css';
+// @import 'pages/homepage.less';
+@import 'styles.scss';
+@import 'importer.css';
+@import 'pages/login.less';
